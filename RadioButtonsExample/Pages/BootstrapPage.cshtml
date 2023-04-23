@@ -1,0 +1,120 @@
+﻿@page
+@model RadioButtonsExample.Pages.BootstrapPageModel
+@{
+}
+
+<div class="container">
+    <div id="test" aria-flowto="false"></div>
+    <form method="post" name="form1" id="main-content">
+        
+        <input type="hidden" asp-for="BlueRadio" id="BlueCheckBox"/>
+        <input type="hidden" asp-for="RedRadio" id="RedCheckBox"/>
+        <input type="hidden" asp-for="GreenRadio" id="GreenCheckBox"/>
+
+        <fieldset class="border border-warning border-opacity-25 p-3 bg-light" style="width: 20em;">
+
+            <legend class="float-none w-auto fs-6 text-danger">Favorite color</legend>
+
+            <div class="form-check">
+                <input aria-checked="false"  
+                       class="form-check-input" 
+                       type="radio" 
+                       name="ColorRadioGroup" 
+                       id="flexRadioDefault1">
+
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Blue
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input aria-checked="false" 
+                       class="form-check-input" 
+                       type="radio" 
+                       name="ColorRadioGroup" 
+                       id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Red
+                </label>
+            </div>
+            
+            <div class="form-check">
+                <input aria-checked="false" 
+                       class="form-check-input" 
+                       type="radio" name="ColorRadioGroup" 
+                       id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    Green
+                </label>
+            </div>
+
+        </fieldset>
+
+        <div class="row">
+            <button id="btn-submit" class="w-25 btn btn-primary m-2" type="submit">Submit</button>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="lib/ariaLib/jquery.aria.min.js"></script>
+
+    <script>
+
+        const radioGroups = document.querySelectorAll('input[type=radio]');
+
+        /*
+         * Assign onClick for each radio button, see also Form1 where
+         * we target a specific group of radio buttons
+         */
+        for (var index = 0, max = radioGroups.length; index < max; index++) {
+            radioGroups[index].onclick = function() {
+                handleClick(this.id);
+            }
+        }
+
+        $(this).on('keydown',
+            function(event) {
+                if (event.key === '0' && event.altKey) {
+                    $("#skipper").focus();
+                }
+            });
+
+        $(this).on('keydown',
+            function(event) {
+                if (event.key === 'q' && event.ctrlKey) {
+                    $("#btn-submit").focus();
+                }
+            });
+
+        /*
+         * Responsible for setting aria-checked for each radio button
+         */
+        function handleClick(identifier) {
+
+            // set all to false
+            $('input:radio[name=ColorRadioGroup]').each(function() {
+                $(this).ariaState({ "checked": false });
+            });
+
+            // set current to true
+            for (let index = 0, groups = radioGroups.length; index < groups; index++) {
+                if (radioGroups[index].id === identifier) {
+                    document.getElementById(identifier).setAttribute('aria-checked', 'true');
+                    document.getElementById(identifier).setAttribute('checked', 'true');
+                }
+            }
+
+        }
+
+        // Assign checked aria checked to page properties $("#BlueCheckBox").ariaState("checked");
+        $('form').submit(function(e) {
+            document.getElementById("BlueCheckBox").value = document.getElementById("flexRadioDefault1").ariaChecked;
+            document.getElementById("RedCheckBox").value = document.getElementById("flexRadioDefault2").checked;
+            document.getElementById("GreenCheckBox").value = document.getElementById("flexRadioDefault3").checked;
+        });
+
+    </script>
+}

@@ -1,0 +1,55 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    var message = HttpContext.Request.PathBase;
+
+    
+}
+
+<div class="container border border-dark border-1 mt-4">
+<div class="row">
+
+    <div style="background-color: #0f506f" class="text-white text-center p-2">
+        Working with Radio Buttons
+    </div>
+
+</div>
+</div>
+
+@*
+    set display:  none to avoid flickering with document ready
+*@
+<div id="showForm1Data" style="display: none" class="container">
+    <span class="fw-bold">From Form1</span> <span class="text-success fw-bold">@Model.Introduction.Name @Model.Introduction.Surname</span>
+</div>
+
+
+@*
+    Coming from Form1 with name and surname populated, show the div with identifier showForm1Data, otherwise hide
+    the div showForm1Data
+*@
+@section scripts{
+    <script>
+        //$(document).ready(function () {
+
+        //    const firstNameElementExists = document.getElementById("firstName");
+
+        //    if(firstNameElementExists){
+        //        var firstName = document.getElementById("firstName");
+        //        var surName = document.getElementById("surName");
+
+        //        if (firstName.value && surName.value) {
+        //            document.getElementById("showForm1Data").style.display = 'block';
+        //        } else {
+        //            document.getElementById("showForm1Data").style.display = 'none';
+        //        }
+        //    }
+
+
+        //});
+    </script>
+}
