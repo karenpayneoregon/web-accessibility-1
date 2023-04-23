@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioButtonsExample", "RadioButtonsExample\RadioButtonsExample.csproj", "{91106084-01E5-4471-895E-CE675EF3B396}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReducedMotionExample", "ReducedMotionExample\ReducedMotionExample.csproj", "{BE941D49-894A-4E87-B32B-64FFF7672A80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{91106084-01E5-4471-895E-CE675EF3B396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91106084-01E5-4471-895E-CE675EF3B396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91106084-01E5-4471-895E-CE675EF3B396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE941D49-894A-4E87-B32B-64FFF7672A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE941D49-894A-4E87-B32B-64FFF7672A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE941D49-894A-4E87-B32B-64FFF7672A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE941D49-894A-4E87-B32B-64FFF7672A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

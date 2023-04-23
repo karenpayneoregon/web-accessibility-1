@@ -1,0 +1,24 @@
+﻿@page
+@model ReducedMotionExample.Pages.SettingsPageModel
+@{
+}
+
+<div class="container" id="main-content">
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="useMotion">
+        <label class="form-check-label" for="useMotion">Use motion</label>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // get setting if exists
+        });
+
+        document.getElementById("useMotion").addEventListener("click", function () {
+            // update setting
+        });
+    </script>
+}

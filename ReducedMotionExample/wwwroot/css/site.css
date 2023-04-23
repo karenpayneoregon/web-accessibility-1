@@ -1,0 +1,96 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.animation {
+    animation: pulse 1s linear infinite both;
+}
+
+.animation1 {
+    animation: pulse 4s linear infinite both;
+}
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+    .animation {
+        animation: dissolve 2s linear infinite both;
+    }
+    .animation1 {
+        animation: dissolve 4s linear infinite both;
+    }
+}
+
+.animation {
+    background-color: red;
+    color: #fff;
+    font: 1.4em sans-serif;
+    width: 10em;
+    padding: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.animation1 {
+    background-color: blue;
+    color: #fff;
+    font: 1.4em sans-serif;
+    width: 10em;
+    padding: 1em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes dissolve {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

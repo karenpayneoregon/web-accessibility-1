@@ -1,0 +1,43 @@
+﻿@page
+@model ReducedMotionExample.Pages.Index1Model
+@{
+}
+
+
+@*
+    See site.css
+    https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+*@
+
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="animation1">Sale today</div>
+    <div id="noAnimate" style="display: none">
+        <div class="card" style="width: 21rem;">
+            <img src="images/none.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Information</h5>
+                <p class="card-text">Detected <mark>prefers-reduced-motion: reduce</mark></p>
+            </div>
+        </div>        
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            if (prefersReducedMotion()) {
+                document.getElementById('noAnimate').style.display = 'inline';
+                document.getElementsByClassName('animation1')[0].style.display = 'none';
+            } 
+        });
+        prefersReducedMotion = function () {
+            // Grab the user's reduced motion setting
+            const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+            // Check if the media query matches or is not available.
+            return !mediaQuery || mediaQuery.matches;
+        }
+    </script>
+}
