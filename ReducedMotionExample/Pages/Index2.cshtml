@@ -12,9 +12,9 @@
     <div class="animation1">Sale today</div>
     <div id="noAnimate" style="display: none">
         <div class="card" style="width: 21rem;">
-            <img src="images/none.png" class="card-img-top">
+            <img src="images/none.png" class="card-img-top" alt="Sale today">
             <div class="card-body">
-                <h5 class="card-title">Information</h5>
+                <h2 class="card-title fs-5">Information</h2>
                 <p class="card-text">Detected <mark>prefers-reduced-motion: reduce</mark></p>
             </div>
         </div>        
@@ -25,7 +25,7 @@
     {
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                if ($Application.getMotion()) {
+                if (!$Application.getMotion()) {
                     document.getElementById('noAnimate').style.display = 'inline';
                     document.getElementsByClassName('animation1')[0].style.display = 'none';
                 }
