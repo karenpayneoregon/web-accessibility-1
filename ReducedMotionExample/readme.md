@@ -130,3 +130,6 @@ Assert setting in local storage, if `$Application.getMotion()` returns true, use
 
 Clone the following [GitHub repository](https://github.com/karenpayneoregon/web-accessibility-1) then use ReduceMotionExample project to  try out what has been presented.
 
+## Article
+
+https://dev.to/karenpayneoregon/tips-on-making-a-web-site-accessible-part-2-486p
