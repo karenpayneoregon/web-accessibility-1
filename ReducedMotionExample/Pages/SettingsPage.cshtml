@@ -14,11 +14,11 @@
 {
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // get setting if exists
+            document.getElementById("useMotion").checked =  ($Application.getMotion().toLowerCase() === 'true');
         });
 
         document.getElementById("useMotion").addEventListener("click", function () {
-            // update setting
+            $Application.setMotion(document.getElementById("useMotion").checked);
         });
     </script>
 }

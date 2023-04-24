@@ -15,3 +15,12 @@
     <div class="animation">Sale today</div>
 </div>
 
+@section Scripts
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                //$Application.setMotion('true');
+                console.log($Application.prefersReducedMotion());
+            });
+        </script>
+}

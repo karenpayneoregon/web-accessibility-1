@@ -25,6 +25,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index1">Via JavaScript</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index2">Via local storage</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/SettingsPage">Settings</a>
                         </li>
                     </ul>
@@ -49,6 +52,7 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Application.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

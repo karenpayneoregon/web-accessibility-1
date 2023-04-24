@@ -5,6 +5,7 @@
 
 
 @*
+    Intent, show alternate content if the visitor prefers reduced motion while the index page simply stops animation
     See site.css
     https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
 *@
@@ -27,17 +28,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-            if (prefersReducedMotion()) {
+            if ($Application.prefersReducedMotion()) {
                 document.getElementById('noAnimate').style.display = 'inline';
                 document.getElementsByClassName('animation1')[0].style.display = 'none';
-            } 
+            }
         });
-        prefersReducedMotion = function () {
-            // Grab the user's reduced motion setting
-            const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-            // Check if the media query matches or is not available.
-            return !mediaQuery || mediaQuery.matches;
-        }
     </script>
 }
