@@ -14,6 +14,7 @@
 
 Using the CSS reduce-motion query to prevent motion
 
+![Title](ReducedMotionExample/assets/title.png)
 
 ## Requires
 
