@@ -1,15 +1,19 @@
-## Working with Radiobuttons and accessibility
+## Accessibility tips and tecniques
 
 ![Title](assets/title.png)
 
-## Article
+## Article 1
 
 [Location](https://dev.to/karenpayneoregon/tips-on-making-a-web-site-accessible-part-1-5e8b)
 
-- Tip/technques
-    - Skip links
-    - Navigation
-    - Working with radio buttons
+- Skip links
+- Navigation
+- Working with radio buttons
+
+## Article 2
+
+Using the CSS reduce-motion query to prevent motion
+
 
 ## Requires
 

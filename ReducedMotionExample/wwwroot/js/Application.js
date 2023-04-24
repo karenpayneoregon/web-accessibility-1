@@ -17,13 +17,12 @@ $Application = function () {
             localStorage.setItem(motionKey, false);
         }
 
-        return localStorage.getItem(motionKey);
+        return localStorage.getItem(motionKey).toLowerCase() === 'true';
+
     };
 
     var prefersReducedMotion = function () {
-        // Grab the user's reduced motion setting
         const results = window.matchMedia('(prefers-reduced-motion: reduce)');
-
         // Check if the media query matches or is not available.
         return !results || results.matches;
     }

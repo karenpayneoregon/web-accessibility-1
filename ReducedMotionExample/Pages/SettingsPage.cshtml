@@ -13,12 +13,13 @@
 @section Scripts
 {
     <script>
+        const identifier = 'useMotion';
         document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("useMotion").checked =  ($Application.getMotion().toLowerCase() === 'true');
+            document.getElementById(identifier).checked = $Application.getMotion();
         });
 
-        document.getElementById("useMotion").addEventListener("click", function () {
-            $Application.setMotion(document.getElementById("useMotion").checked);
+        document.getElementById(identifier).addEventListener("click", function () {
+            $Application.setMotion(document.getElementById(identifier).checked);
         });
     </script>
 }

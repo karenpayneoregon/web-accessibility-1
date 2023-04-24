@@ -3,6 +3,11 @@
 @{
 }
 
+@*
+    This page determines to use reduce-motion from local storage settings
+    set in the SettingsPage.
+*@
+
 <div class="position-absolute top-50 start-50 translate-middle">
     <div class="animation1">Sale today</div>
     <div id="noAnimate" style="display: none">
@@ -20,8 +25,7 @@
     {
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                console.log($Application.getMotion().toLowerCase());
-                if (($Application.getMotion().toLowerCase() === 'true')) {
+                if ($Application.getMotion()) {
                     document.getElementById('noAnimate').style.display = 'inline';
                     document.getElementsByClassName('animation1')[0].style.display = 'none';
                 }
